@@ -22,9 +22,9 @@ from telegram.ext import (
 import pytz
 
 # ------------------ CONFIG ------------------
-TELEGRAM_BOT_TOKEN = "8276896385:AAGouAINBiNDBVnxNa6O-5AX-gOpPooFjbI"
-NEWSDATA_API_KEY = "pub_47ebffc010bc4ae6835e31207d221534"
-THENEWSAPI_KEY = "2hxYWVH1czXBxC3CFrDImeuG8anfBiA1FQ0idwMD"
+TELEGRAM_BOT_TOKEN = os.getenv("8276896385:AAGouAINBiNDBVnxNa6O-5AX-gOpPooFjbI")
+NEWSDATA_API_KEY = os.getenv("pub_47ebffc010bc4ae6835e31207d221534")
+THENEWSAPI_KEY = os.getenv("2hxYWVH1czXBxC3CFrDImeuG8anfBiA1FQ0idwMD")
 SUBSCRIBERS_FILE = "subscribers.json"
 NEWS_TRACKER_FILE = "news_tracker.json"
 
