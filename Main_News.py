@@ -1,9 +1,11 @@
 import asyncio
 import json
+from dotenv import load_dotenv
 import os
 import requests
 import feedparser
 from datetime import datetime
+
 from telegram import (
     Update,
     InlineKeyboardButton,
@@ -20,11 +22,12 @@ from telegram.ext import (
     filters,
 )
 import pytz
+load_dotenv()
 
 # ------------------ CONFIG ------------------
-TELEGRAM_BOT_TOKEN = os.getenv("8276896385:AAGouAINBiNDBVnxNa6O-5AX-gOpPooFjbI")
-NEWSDATA_API_KEY = os.getenv("pub_47ebffc010bc4ae6835e31207d221534")
-THENEWSAPI_KEY = os.getenv("2hxYWVH1czXBxC3CFrDImeuG8anfBiA1FQ0idwMD")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+NEWSDATA_API_KEY = os.env("NEWSDATA_API_KEY")
+THENEWSAPI_KEY = os.env("THENEWSAPI_KEY")
 SUBSCRIBERS_FILE = "subscribers.json"
 NEWS_TRACKER_FILE = "news_tracker.json"
 
